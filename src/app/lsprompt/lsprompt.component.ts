@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-lsprompt',
@@ -7,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lsprompt.component.css']
 })
 export class LspromptComponent implements OnInit {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cs:ConfigService) { }
   id: string = '';
   prompts: any[] = []; // Menyimpan data prompt dari server
-
+  base_url = this.cs.base_url
   ngOnInit(): void {
     const dataFromLocalStorage = localStorage.getItem("data");
     if (dataFromLocalStorage) {
       try {
         const parsedData = JSON.parse(dataFromLocalStorage);
         this.id = parsedData.id.toString(); // Menyimpan id sebagai string
-        this.http.get<any>("http://128.199.177.206:5173/api/prompt/" + this.id).subscribe(
+        this.http.get<any>(this.base_url+"/api/prompt/" + this.id).subscribe(
           res => {
             console.log(res);
             this.prompts = res.payload; // Menyimpan data prompt dari server
@@ -35,7 +36,7 @@ export class LspromptComponent implements OnInit {
     }
   }
   delete(id:number){
-    this.http.get<any>("http://128.199.177.206:5173/api/prompt/delete/" + id).subscribe(
+    this.http.get<any>(this.base_url+"/api/prompt/delete/" + id).subscribe(
       res => {
         window.location.reload(); // Refresh the page
       },

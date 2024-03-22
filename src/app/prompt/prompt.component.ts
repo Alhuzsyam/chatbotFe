@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-prompt',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 
 export class PromptComponent implements OnInit, OnDestroy {
-  constructor(private http: HttpClient, private router: Router) {}
-
+  constructor(private http: HttpClient, private router: Router, private cs:ConfigService) {}
+  
   prompt: string = '';
   message: string = '';
   bot: string = '';
@@ -18,8 +19,10 @@ export class PromptComponent implements OnInit, OnDestroy {
   typingDelay: number = 50; // Delay between each character typing in milliseconds
   typingInterval: any; // Interval reference for typing animation
   idValue: any;
-
-  ngOnInit(): void {}
+  base_url = this.cs.base_url
+  ngOnInit(): void {
+    
+  }
 
   ngOnDestroy(): void {
     clearInterval(this.typingInterval); // Cleanup interval to prevent memory leaks
@@ -30,7 +33,7 @@ export class PromptComponent implements OnInit, OnDestroy {
       this.message = "Field tidak boleh kosong!";
       this.status = 'warning';
     } else {
-      this.http.get<any>('http://128.199.177.206:5173/api/bot/chat?prompt=' + this.prompt).subscribe(
+      this.http.get<any>(this.base_url+'/api/bot/chat?prompt=' + this.prompt).subscribe(
         response => {
           console.log(response);
           const res = response.payload;
@@ -75,7 +78,7 @@ export class PromptComponent implements OnInit, OnDestroy {
         const parsedObject = JSON.parse(dataFromLocalStorage);
         this.idValue = parsedObject.id;
         const data = { userId: this.idValue, prompt: this.prompt, result: this.bot };
-        this.http.post<any>('http://128.199.177.206:5173/api/prompt/add', data).subscribe(
+        this.http.post<any>(this.base_url+'/api/prompt/add', data).subscribe(
           res => {
             this.message = "Data berhasil disimpan";
             this.status = 'success';

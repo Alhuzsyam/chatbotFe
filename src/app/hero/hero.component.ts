@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-hero',
@@ -17,10 +18,12 @@ export class HeroComponent {
   namaInvalid: boolean = false;
   emailInvalid: boolean = false;
   passwordInvalid: boolean = false;
-  constructor(private http: HttpClient, private router: Router) {
+  
+  constructor(private http: HttpClient, private router: Router,private configService: ConfigService) {
     const textToType: string = "apa ada hal yang bisa saya bantu tuan ? ";
     this.typeText(textToType, 0);
   }
+   base_url = this.configService.base_url
 
   typeText(text: string, index: number) {
     this.typedText = text.substring(0, index);
@@ -42,7 +45,7 @@ export class HeroComponent {
     } else {
       this.message = 'Form berhasil dikirim!';
       const data = { name: this.nama, email: this.email, password: this.password };
-      this.http.post<any>('http://128.199.177.206:5173/api/users/add', data).subscribe(
+      this.http.post<any>(this.base_url+'/api/users/add', data).subscribe(
         response => {
           // console.log(data);
           // if(data)
@@ -78,7 +81,7 @@ export class HeroComponent {
       this.alert = 'alert alert-warning';
     } else {
       const body = { email: this.email, password: this.password };
-      this.http.post<any>('http://128.199.177.206:5173/api/users/login', body).subscribe(
+      this.http.post<any>(this.base_url+'/api/users/login', body).subscribe(
         response => {
           if(response.status === "404 NOT_FOUND"){
             this.message = 'email / password salah!';
