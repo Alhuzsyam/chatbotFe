@@ -1,0 +1,35 @@
+
+.prompt {
+    background-color: #DCF8C6; /* Warna latar belakang pesan WhatsApp */
+    padding: 10px; /* Padding untuk ruang di sekitar teks */
+    border-radius: 10px; /* Membuat sudut elemen menjadi melengkung */
+    max-width: 50%; /* Batas lebar maksimum pesan agar tidak terlalu lebar */
+    margin-bottom: 10px; /* Jarak antara pesan */
+    overflow: hidden; /* Menyembunyikan teks yang melebihi lebar maksimum */
+    text-overflow: ellipsis; /* Menambahkan ellipsis jika teks melebihi lebar maksimum */
+    white-space: nowrap; /* Mencegah teks dari pemisahan baris */
+  }
+  
+
+.box {
+    height: 16rem;
+    background: var(--bs-black);
+    /* color: var(--bs-teal); */
+    padding: 40px;
+    border-radius: 8px;
+    overflow: auto; /* Add overflow auto to enable scrolling if content exceeds terminal height */
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .box {
+        padding: 10px; /* Further reduce padding for smaller screens */
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
+}
+

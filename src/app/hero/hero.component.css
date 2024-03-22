@@ -1,0 +1,113 @@
+section.hero {
+    margin: 5rem 0;
+}
+
+.text-label {
+    color: var(--primary);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px;
+}
+
+.text-hero-bold {
+    color: var(--dark-brown);
+    font-size: var(--header-1);
+    font-weight: var(--font-weight-bold);
+    line-height: 74px;
+}
+
+.text-hero-regular {
+    color: var(--gray-1);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px;
+}
+
+.text-label, .text-hero-bold, .text-hero-regular {
+    margin: 24px 0;
+}
+/* section.hero {
+    margin: 5rem 0;
+} */
+.btn-primary:hover {
+    background-color: #8371fd !important;
+  }
+.text-label {
+    color: var(--primary);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px;
+}
+
+.text-hero-bold {
+    color: var(--dark-brown);
+    font-size: var(--header-1);
+    font-weight: var(--font-weight-bold);
+    line-height: 74px;
+}
+
+.text-hero-regular {
+    color: var(--gray-1);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px;
+}
+
+.text-label, .text-hero-bold, .text-hero-regular,input {
+    margin: 24px 0;
+}
+
+input{
+    height: 4.5rem;
+    border: none;
+    background: var(--gray-2);
+    border-radius: 25px;
+    margin-top:0.5rem;
+    margin-bottom: 0px;
+}
+.m-lable{
+    margin-bottom: 0;
+}
+
+
+.terminal {
+    width: 100%; /* Set width to 100% */
+    max-width: 35rem; /* Set max-width to prevent it from becoming too wide on larger screens */
+    height: 16rem;
+    background: var(--bs-black);
+    color: var(--bs-teal);
+    padding: 40px;
+    border-radius: 8px;
+    overflow: auto; /* Add overflow auto to enable scrolling if content exceeds terminal height */
+}
+
+@media (max-width: 768px) {
+    .terminal {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .terminal {
+        padding: 10px; /* Further reduce padding for smaller screens */
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
+}
+
+.typing-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .typing-container p {
+    display: inline-block;
+    vertical-align: middle;
+    animation: typing 3s steps(40, end);
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  

@@ -1,0 +1,46 @@
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+      <img src="../assets/icon/openai.svg" alt="" srcset="" style="width:2.3rem;" class="icon">
+        <div class="logo_name">Gwen.AI</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="/dashboard/prompt">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="/dashboard/list">
+            <i class='bx bx-hdd' ></i>
+          <span class="links_name">Saved Prompt</span>
+        </a>
+         <span class="tooltip">Saved Prompt</span>
+      </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="../assets/icon/AIHERO.svg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">GewnAi</div>
+             <div class="job">{{email}}</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" (click)="logout()" style="cursor: pointer;"></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+     <router-outlet></router-outlet>
+  </section>
+
+  <script src="script.js"></script>
+

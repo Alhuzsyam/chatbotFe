@@ -1,0 +1,113 @@
+<app-header></app-header>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="copy aos-init aos-animate" data-aos="fade-up" data-aos-duration="3000">
+                <div class="text-label">
+                    Chatbot dengan teknologi Open AI / GPT-TURBO-3.5
+                </div>
+                <div class="text-hero-bold">
+                    Asking anything you want 
+                </div>
+                <div class="text-hero-regular">
+                    AI Will give best answer !
+                </div>
+                <div class="cta">
+                    <a href="register" class="btn btn-primary shadow-none" type="button"data-bs-toggle="modal" data-bs-target="#exampleModal">Segera Daftar</a>
+                    <a href="" class="btn btn-secondary shadow-none ms-3" data-bs-toggle="modal" data-bs-target="#logineModal">Sudah punya akun</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3000">
+            <img src="https://growup-demo.netlify.app/assets/img/illustration/Hero%20Image.svg" class="w-100" alt="img">
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="terminal mb-3">
+                [$GwenAi@192] # <span class="typing-container">{{typedText}}</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="copy aos-init aos-animate" data-aos="fade-up" data-aos-duration="3000">
+                <div class="text-label">
+                    Chatbot dengan teknologi Open AI / GPT-TURBO-3.5
+                </div>
+                <div class="text-hero-bold">
+                    Realtime answer from AI !
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<app-footer></app-footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registration form</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div *ngIf="message" class="{{alert}}" role="alert">
+                {{ message }}
+            </div>
+            <div class="form-group">
+              <input type="text"
+                class="form-control" name="nama" id="nama" [(ngModel)]="nama" aria-describedby="helpId" placeholder="nama" [ngClass]="{'is-invalid': namaInvalid && !nama}">
+            </div>
+            <div class="form-group">
+                <input type="email"
+                  class="form-control" name="email" id="email" [(ngModel)]="email" aria-describedby="helpId" placeholder="email" [ngClass]="{'is-invalid': emailInvalid && !email}">
+            </div>
+            <div class="form-group">
+                <input type="password"
+                  class="form-control" name="password" id="password" [(ngModel)]="password" aria-describedby="helpId" placeholder="password" [ngClass]="{'is-invalid': passwordInvalid && !password}">
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="handleClick()">Daftar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="logineModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div *ngIf="message" class="{{alert}}" role="alert">
+                {{ message }}
+            </div>
+            <div class="form-group">
+              <input type="text"
+                class="form-control" type="email" name="email" id="email" aria-describedby="helpId" placeholder="email" [(ngModel)]="email" [ngClass]="{'is-invalid': emailInvalid && !email}">
+            </div>
+            <div class="form-group">
+                <input type="text"
+                  class="form-control" type="password" name="password" id="password" aria-describedby="helpId" placeholder="password" [(ngModel)]="password" [ngClass]="{'is-invalid': passwordInvalid && !password}">
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>

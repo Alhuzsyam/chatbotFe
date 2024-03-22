@@ -1,0 +1,15 @@
+<div class="container p-5">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of prompts">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Card title</h5> -->
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{ item.prompt }}</h6>
+                  <p class="card-text">{{ item.result }}</p>
+                  <span  class="card-link"><i class='bx bx-download' style="cursor: pointer;" ></i></span>
+                  <span class="card-link"><i (click)="delete(item.id)" class='bx bx-trash' style="cursor: pointer;" ></i></span>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
