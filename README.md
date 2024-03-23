@@ -14,4 +14,5 @@ Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberi
 3. Selanjutnya, jalankan perintah `ng s` dan tunggu hingga aplikasi dijalankan pada port yang ditentukan.
 
 ## Contoh Aplikasi
-![Uploading Mar-23-2024 12-50-02.gif…]()
+
+![Mar-23-2024 12-31-54](https://github.com/Alhuzsyam/chatbotFe/assets/64511435/21ef7be4-90f2-46f8-a00c-9d547d5a0107)
