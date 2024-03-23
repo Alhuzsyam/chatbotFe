@@ -1,6 +1,7 @@
 # Chatbot
 Aplikasi ini merupakan sebuah frond end atau tampilan depan dari repositori dibawah
 stact yang saya gunakan adalah angular js, untuk demo nya anda bisa mengunjungi link berikut
+<a href="http://128.199.177.206:5050/">live demo</a>
 
 #requirement
 install nodeJs dan npm
