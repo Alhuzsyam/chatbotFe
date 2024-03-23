@@ -1,6 +1,6 @@
 # Chatbot
 
-Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberikan. Stack yang digunakan adalah AngularJS. Untuk melihat demo, Anda dapat mengunjungi [tautan ini](http://128.199.177.206:5050/).
+Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberikan. Stack yang digunakan adalah AngularJS. Untuk melihat demo, Anda dapat mengunjungi [Live Demo](http://128.199.177.206:5050/).
 
 ## Persyaratan
 - Node.js dan npm harus terinstal.
@@ -14,4 +14,4 @@ Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberi
 3. Selanjutnya, jalankan perintah `ng s` dan tunggu hingga aplikasi dijalankan pada port yang ditentukan.
 
 ## Contoh Aplikasi
-![Contoh Aplikasi](https://github.com/Alhuzsyam/chatbotFe/assets/64511435/841940a9-d2b4-412e-b080-d815af714e2e)
+![Uploading Mar-23-2024 12-50-02.gif…]()
