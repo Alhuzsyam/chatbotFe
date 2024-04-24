@@ -1,6 +1,6 @@
 # Chatbot
 
-Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberikan. Stack yang digunakan adalah AngularJS. Untuk melihat demo, Anda dapat mengunjungi [Live Demo](http://128.199.177.206:5050/).
+Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberikan. Stack yang digunakan adalah AngularJS. Untuk melihat demo, Anda dapat mengunjungi [Live Demo](http://128.199.177.206/).
 
 ## Persyaratan
 - Node.js dan npm harus terinstal.
