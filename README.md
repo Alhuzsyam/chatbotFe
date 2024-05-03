@@ -1,7 +1,6 @@
 # Chatbot
 
-Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberikan. Stack yang digunakan adalah AngularJS. Untuk melihat demo, Anda dapat mengunjungi [Live Demo](
-https://www.youtube.com/watch?v=EHACXK1y_So).
+Aplikasi ini merupakan antarmuka pengguna (frontend) dari repositori yang diberikan. Stack yang digunakan adalah AngularJS. Untuk melihat demo, Anda dapat mengunjungi [Live Demo](https://gwenai.alfialhuzwiri.site/).
 
 ## Persyaratan
 - Node.js dan npm harus terinstal.
